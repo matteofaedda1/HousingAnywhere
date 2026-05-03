@@ -452,9 +452,10 @@ export default function PropertyForm({ onSubmit, hideTitle }: PropertyFormProps)
             </div>
           </Section>
 
+          {/* Inline button: always visible on desktop, visible on mobile only when no section is open */}
           <button
             onClick={handleSubmit}
-            className="mt-1 md:mt-0 md:ml-2 bg-brand hover:bg-brand-dark text-white h-[52px] md:h-12 pl-5 pr-1.5 md:pl-6 md:pr-1.5 rounded-full transition-all duration-300 flex items-center justify-between md:justify-center gap-3 group active:scale-95 w-full md:w-auto max-w-none mx-auto md:mx-0 py-1"
+            className={`${activeSection ? 'hidden md:flex' : 'flex'} mt-1 md:mt-0 md:ml-2 bg-brand hover:bg-brand-dark text-white h-[52px] md:h-12 pl-5 pr-1.5 md:pl-6 md:pr-1.5 rounded-full transition-all duration-300 items-center justify-between md:justify-center gap-3 group active:scale-95 w-full md:w-auto max-w-none mx-auto md:mx-0 py-1`}
           >
             <span className="font-semibold text-[15px] text-left">Get Estimate</span>
             <div className="bg-white/20 group-hover:bg-white/30 rounded-full w-[40px] h-[40px] md:w-9 md:h-9 flex items-center justify-center overflow-hidden relative transition-colors shrink-0">
@@ -464,6 +465,22 @@ export default function PropertyForm({ onSubmit, hideTitle }: PropertyFormProps)
           </button>
         </div>
       </div>
+
+      {/* Mobile sticky bottom bar — visible only when a section is open */}
+      {activeSection && (
+        <div className="md:hidden fixed bottom-0 left-0 right-0 z-[200] bg-white border-t border-[#EBEBEB] px-4 pt-3 pb-8 shadow-[0_-4px_24px_rgba(0,0,0,0.10)]">
+          <button
+            onClick={handleSubmit}
+            className="w-full bg-brand hover:bg-brand-dark text-white h-[52px] rounded-full transition-all duration-300 flex items-center justify-between gap-3 group active:scale-95 px-5 pr-1.5 py-1"
+          >
+            <span className="font-semibold text-[15px] text-left">Get Estimate</span>
+            <div className="bg-white/20 group-hover:bg-white/30 rounded-full w-[40px] h-[40px] flex items-center justify-center overflow-hidden relative transition-colors shrink-0">
+              <ArrowRight size={20} strokeWidth={2} className="absolute transition-transform duration-[400ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:translate-x-[150%]" />
+              <ArrowRight size={20} strokeWidth={2} className="absolute -translate-x-[150%] transition-transform duration-[400ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:translate-x-0" />
+            </div>
+          </button>
+        </div>
+      )}
     </motion.div>
   );
 }
