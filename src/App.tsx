@@ -167,8 +167,8 @@ function App() {
       <main className="flex-1 pt-[68px]">
 
         {/* ─── Hero ─────────────────────────────────────────────────── */}
-        <div className="hero-bg relative overflow-hidden" style={{ height: '860px' }}>
-          <div className="max-w-[1440px] mx-auto px-6 lg:px-12 flex flex-col items-center text-center pt-16 lg:pt-24 pb-8">
+        <div className="hero-bg relative overflow-visible md:overflow-hidden md:h-[860px]">
+          <div className="max-w-[1440px] mx-auto px-6 lg:px-12 flex flex-col items-center text-center pt-16 lg:pt-24 pb-[180px] md:pb-8">
 
             <motion.h1
               initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}
@@ -191,7 +191,7 @@ function App() {
             <motion.div
               initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="w-full max-w-[56rem]"
+              className="w-full max-w-[56rem] relative z-20"
             >
               {formError && (
                 <motion.div
