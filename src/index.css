@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hero-bg {
+  background: #FF4B27;
+}
+
+/* ── HousingAnywhere fonts ─────────────────────────────────────────────── */
+@font-face {
+  font-family: 'PoppinsLight';
+  src: url('/fonts/Poppins-Light.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 300;
+  font-display: block;
+}
+@font-face {
+  font-family: 'PoppinsMedium';
+  src: url('/fonts/Poppins-Medium.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 500;
+  font-display: block;
+}
+
+@layer base {
+  body {
+    @apply text-ha-dark bg-white;
+    font-family: 'PoppinsLight', sans-serif;
+  }
+}
+
+@layer utilities {
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #e0e0e0;
+    border-radius: 2px;
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
