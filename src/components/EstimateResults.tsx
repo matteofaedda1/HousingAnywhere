@@ -737,13 +737,13 @@ export default function EstimateResults({ scrapeData, formData, onClose }: Estim
               <p className="text-[13px] text-[#676767] italic text-center py-10">Data not available for this city</p>
             ) : (
               <>
-                <ResponsiveContainer width="100%" height={300}>
+                <ResponsiveContainer width="100%" height={340}>
                   <PieChart>
                     <Pie
                       data={activeProfileData}
                       cx="50%"
                       cy="50%"
-                      outerRadius={110}
+                      outerRadius={100}
                       dataKey="value"
                       labelLine={false}
                       label={CustomPieLabel}
@@ -794,7 +794,7 @@ export default function EstimateResults({ scrapeData, formData, onClose }: Estim
             <p className="text-[14px] text-[#676767]">List your property on HousingAnywhere and start earning.</p>
           </div>
           <a
-            href="https://housinganywhere.com/landlord"
+            href="https://housinganywhere.com/renting-out-private--Italy"
             target="_blank"
             rel="noopener noreferrer"
             className="flex-shrink-0 bg-brand text-white font-semibold text-[14px] px-6 py-3 rounded-full hover:bg-brand-light transition-colors whitespace-nowrap"

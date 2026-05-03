@@ -141,7 +141,7 @@ function App() {
             </a>
 
             <a
-              href="https://housinganywhere.com/landlord"
+              href="https://housinganywhere.com/renting-out-private--Italy"
               target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center border border-[#0D0D0D] text-[#0D0D0D] text-[14px] px-4 py-[8px] rounded-xl hover:bg-black/5 transition-colors duration-200 flex-shrink-0 whitespace-nowrap mx-1"
               style={{ fontFamily: 'PoppinsMedium, sans-serif' }}
