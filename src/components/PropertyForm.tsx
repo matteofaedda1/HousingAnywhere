@@ -227,7 +227,7 @@ const Section = ({
             <div>{dropdownContent}</div>
           </div>
         ) : (
-          <div className="flex justify-between items-center bg-white rounded-[1.5rem] shadow-sm border border-[#EBEBEB]/50 px-5 py-4 cursor-pointer">
+          <div className="flex justify-between items-center bg-ha-bg rounded-2xl px-5 py-4 cursor-pointer">
             <span className="text-[14px] font-medium text-[#676767]">{label}</span>
             <span className={`text-[14px] font-normal truncate ml-4 ${value ? 'text-[#0D0D0D]' : 'text-[#ADADAD]'}`}>
               {value || placeholder}
@@ -407,7 +407,7 @@ export default function PropertyForm({ onSubmit, hideTitle }: PropertyFormProps)
       )}
 
       <div className="max-w-[56rem] mx-auto w-full">
-        <div className="bg-transparent md:bg-white rounded-[2rem] md:rounded-full p-0 md:p-2 flex flex-col md:flex-row items-stretch md:items-center h-auto md:h-16 transition-all duration-300 gap-3 md:gap-0 shadow-none">
+        <div className="bg-white md:bg-white rounded-3xl md:rounded-full p-4 md:p-2 flex flex-col md:flex-row items-stretch md:items-center h-auto md:h-16 transition-all duration-300 gap-2 md:gap-0 shadow-xl md:shadow-none">
           <Section
             id="location"
             label="Where"
@@ -454,7 +454,7 @@ export default function PropertyForm({ onSubmit, hideTitle }: PropertyFormProps)
 
           <button
             onClick={handleSubmit}
-            className="mt-2 md:mt-0 md:ml-2 bg-brand hover:bg-brand-light text-white h-[48px] md:h-12 pl-4 pr-1 md:pl-6 md:pr-1.5 rounded-full transition-all duration-300 flex items-center justify-between md:justify-center gap-3 group shadow-lg active:scale-95 w-full md:w-auto max-w-[320px] md:max-w-none mx-auto md:mx-0 py-1"
+            className="mt-1 md:mt-0 md:ml-2 bg-brand hover:bg-brand-dark text-white h-[52px] md:h-12 pl-5 pr-1.5 md:pl-6 md:pr-1.5 rounded-full transition-all duration-300 flex items-center justify-between md:justify-center gap-3 group active:scale-95 w-full md:w-auto max-w-none mx-auto md:mx-0 py-1"
           >
             <span className="font-semibold text-[15px] text-left">Get Estimate</span>
             <div className="bg-white/20 group-hover:bg-white/30 rounded-full w-[40px] h-[40px] md:w-9 md:h-9 flex items-center justify-center overflow-hidden relative transition-colors shrink-0">
