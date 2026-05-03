@@ -406,7 +406,7 @@ export default function PropertyForm({ onSubmit, hideTitle }: PropertyFormProps)
         </div>
       )}
 
-      <div className="max-w-[56rem] mx-auto w-full">
+      <div className={`max-w-[56rem] mx-auto w-full ${activeSection ? 'pb-28 md:pb-0' : ''}`}>
         <div className="bg-white md:bg-white rounded-3xl md:rounded-full p-4 md:p-2 flex flex-col md:flex-row items-stretch md:items-center h-auto md:h-16 transition-all duration-300 gap-2 md:gap-0 shadow-xl md:shadow-none">
           <Section
             id="location"
